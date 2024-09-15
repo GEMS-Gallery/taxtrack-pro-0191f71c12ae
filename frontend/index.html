@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxPayer Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+        }
+        #taxpayerList {
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TaxPayer Management</h1>
+    
+    <h2>Add New TaxPayer</h2>
+    <form id="addTaxPayerForm">
+        <input type="text" id="tid" placeholder="TID" required>
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <button type="submit">Add TaxPayer</button>
+    </form>
+
+    <h2>Search TaxPayer</h2>
+    <input type="text" id="searchTID" placeholder="Enter TID to search">
+    <button id="searchButton">Search</button>
+
+    <div id="searchResult"></div>
+
+    <h2>All TaxPayers</h2>
+    <button id="refreshButton">Refresh List</button>
+    <div id="taxpayerList"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
